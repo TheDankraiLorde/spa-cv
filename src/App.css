@@ -1,0 +1,38 @@
+.App {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: rgb(9, 9, 34);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  min-height: 50vh;
+}
+
+.App-heading {
+  display: flex;
+  background-color: inherit;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 80%;
+  min-height: 80%;
+  width: 80%;
+  min-width: 80%;
+}
+
+.name {
+  padding: 0 0 1.5em;
+  font-size: 45px;
+}
+
+.about {
+  background-color: white;
+  color: black;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-size: 20px;
+}
