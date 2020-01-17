@@ -3,13 +3,13 @@
   flex-direction: column;
 }
 
-.body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .card{
   margin: 1em;
 }
 
+.about {
+  padding: 1.5em;
+  font-size: 20px;
+  text-align: center;
+}

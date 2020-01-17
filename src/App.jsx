@@ -1,34 +1,17 @@
 import React from "react";
 import "./App.css";
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './components/Header/header'
-import menu from './data/menu'
 import data from './data/data_val'
+import Menu from "./components/Menu/Menu";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <h6 className="about">{data.about}</h6>
+      <div className="jumbotron about">{data.about}</div>
       <Router>
-        <div className="container body">
-          <div className="card-deck">
-          {
-            menu.map(item => (
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title">
-                    {item.title}
-                  </h5>
-                  <p className="card-text">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))
-          }
-          </div>
-        </div>
+        <Menu />
       </Router>
     </div>
     

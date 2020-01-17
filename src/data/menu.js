@@ -1,9 +1,5 @@
 const menu = [
     {
-        title: "About",
-        description: "A little about me!"
-    },
-    {
         title: "Education",
         description: "A bit about where I've learned skills!"
     },
