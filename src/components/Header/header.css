@@ -4,8 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
-    min-height: 50vh;
   }
   
   .App-heading {
@@ -20,15 +18,14 @@
   }
   
   .name {
-    padding: 0 0 1.5em;
+    width: 100%;
+    text-align: center;
     font-size: 45px;
   }
   
   .about {
-    background-color: white;
-    color: black;
-    padding: 0.5em;
-    border-radius: 0.5em;
+    padding: 1.5em;
     font-size: 20px;
+    text-align: center;
   }
   
