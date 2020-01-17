@@ -23,13 +23,6 @@ function App() {
                   <p className="card-text">
                     {item.description}
                   </p>
-                  <button className="btn btn-primary" style={
-                    {
-                      textTransform:'capitalize'
-                    }
-                  }>
-                    {item.title}
-                  </button>
                 </div>
               </div>
             ))
