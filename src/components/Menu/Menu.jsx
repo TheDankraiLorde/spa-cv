@@ -4,12 +4,12 @@ import {Link} from 'react-router-dom';
 import './menu.css'
 
 const Menu = () => (
-    <div className="container body">
-        <div className="card-deck">
+    <div className="container-fluid row">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         {
             menu.map((item,ind) => (
                 <Link to={`/${item.title}`} key={ind}>
-                    <div className="card border-dark mb-3">
+                    <div className="card border-dark">
                         <div className="card-header">
                             <h5>{item.title}</h5>
                         </div>
