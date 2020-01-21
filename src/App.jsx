@@ -1,26 +1,44 @@
-import React from "react";
-import "./App.css";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Header from './components/Header/header'
+import React, {useContext} from "react";
+import {useTransition, animated} from 'react-spring';
+import {Switch, Route, __RouterContext} from 'react-router-dom';
+
+//Components
 import About from './components/About/About';
 import Menu from "./components/Menu/Menu";
 import Education from "./components/Education/education";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/contact";
 
-function App() {
+//CSS
+import "./App.css";
+
+
+const App = () => {
+
+  const { location } = useContext(__RouterContext);
+  const transitions = useTransition(location, location => location.pathname, {
+    from: { opacity: 0, transform: "translate(100%, 0)"},
+    enter: { opacity: 1, transform: "translate(0%, 0)" },
+    leave: { opacity: 0, transform: "translate(-50%, 0)"},
+  })
+
   return (
     <div className="App">
-      <Header />
-      <Router>
-          <Switch>
-            <Route exact path="/" component={Menu}/>            
-            <Route exact path="/About" component={About}/>            
-            <Route exact path="/Education" component={Education}/>            
-            <Route exact path="/Skills" component={Skills}/>            
-            <Route exact path="/Contact" component={Contact}/>            
-          </Switch>
-      </Router>
+      {
+        transitions.map(
+          ({item,props,key}) => (
+            <animated.div key={key} style={props}>
+              <Switch location={item}>
+                <Route exact path="/" component={Menu}/>            
+                <Route exact path="/About" component={About}/>            
+                <Route exact path="/Education" component={Education}/>            
+                <Route exact path="/Skills" component={Skills}/>            
+                <Route exact path="/Contact" component={Contact}/>            
+              </Switch>
+            </animated.div>
+          )
+        )
+      }  
     </div>
     
   );
