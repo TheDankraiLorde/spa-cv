@@ -10,9 +10,14 @@ const About = ({history}) => (
             <div className="card">
                 <div className="card-header"><h1>About</h1></div>
                 <div className="card-body">
-                    Experience: {`${data.experience.years} years and ${data.experience.months} months`}
-                    <br/><br/>
-                    {data.about}
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <strong>Experience:</strong>{` ${data.experience.years} years and ${data.experience.months} months`}
+                        </li>
+                        <li className="list-group-item">
+                             {data.about}   
+                        </li>
+                    </ul>
                 </div>
                 <div className="card-footer">
                     <button className="btn btn-primary" onClick={history.goBack}>

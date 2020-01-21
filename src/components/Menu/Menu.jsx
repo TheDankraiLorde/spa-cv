@@ -1,32 +1,23 @@
 import React from 'react';
 import menu from '../../data/menu';
-import {Link} from 'react-router-dom';
 import './menu.css'
 import CompWrapper from '../Wrapper/CompWrapper';
+import MenuItem from './MenuItem/MenuItem';
 
-const Menu = () => (
-   <CompWrapper>
+const Menu = () => {
+
+    return (
+    <CompWrapper>
         <div className="container-fluid row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             {
-                menu.map((item,ind) => (
-                    <Link to={`/${item.title}`} key={ind}>
-                        <div className="card border-dark">
-                            <div className="card-header">
-                                <h5>{item.title}</h5>
-                            </div>
-                            <div className="card-body">
-                                <p className="card-text">
-                                    {item.description}
-                                </p>
-                            </div>
-                        </div>
-                    </Link>
+                menu.map((item, ind) => (
+                    <MenuItem item={item} key={ind}/>
                 ))
             }
             </div>
         </div>
    </CompWrapper>
-);
+)};
 
 export default Menu;

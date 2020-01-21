@@ -10,10 +10,12 @@ const Contact = ({history}) => (
                 <h3>Contact Me!</h3>
             </div>
             <div className="card-body">
-                <p>GitHub: {data.github}</p>
-                <p>LinkedIn: {data.linkedin}</p>
-                <p>Email: {data.mail}</p>
-                <p>Phone: {data.phone}</p>
+                <ul className="list-group">
+                    <li className="list-group-item"><b><i>GitHub:</i></b> {data.github}</li>
+                    <li className="list-group-item"><b><i>LinkedIn:</i></b> {data.linkedin}</li>
+                    <li className="list-group-item"><b><i>Email:</i></b> {data.mail}</li>
+                    <li className="list-group-item"><b><i>Phone:</i></b> {data.phone}</li>
+                </ul>
             </div>
             <div className="card-footer">
                 <button className="btn btn-primary" onClick={history.goBack}>

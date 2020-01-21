@@ -2,7 +2,7 @@ import React from 'react';
 import './header.css';
 import data from "../../data/data_val";
 import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations'
+import bounce from 'react-animations/lib/bounce';
 
 const Bounce = styled.div`animation: 2s ${keyframes `${bounce}`}  1`
 
