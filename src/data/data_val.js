@@ -6,9 +6,9 @@ const data = {
     months: 3
   },
   github: "https://github.com/TheDankraiLorde",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/gauravmenezes/",
   phone: "+91 90515-71872",
-  mail: "menezesgaurav1@gmail.com"
+  mail: "gauravmenezes@gmail.com"
 };
 
 export default data;

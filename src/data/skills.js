@@ -17,7 +17,7 @@ var skills = {
     description:
       "I have knowledge on the basics of Java (Collections API, JDBC and Servlets) as well as hands on experience in performing enhancements in our project."
   },
-  sql: {
+  SQL: {
     time: 2.41,
     version: 0,
     description:
@@ -29,6 +29,6 @@ var skills = {
     description:
       "Learnt the basics of Python in project and am currently learning Flask."
   }
-}
+};
 
 export default skills;
